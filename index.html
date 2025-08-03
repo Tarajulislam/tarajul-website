@@ -9,62 +9,164 @@
             font-family: 'SolaimanLipi', Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             color: #333;
         }
         header {
-            background-color: #2c3e50;
+            background-color: #8B0000;
             color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-        section {
-            background: white;
             padding: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #B22222;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 12px 0;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #7a1414;
+        }
+        .container {
+            max-width: 1200px;
             margin: 20px auto;
-            max-width: 600px;
+            display: flex;
+            gap: 20px;
+            padding: 0 15px;
+        }
+        main {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        aside {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            height: fit-content;
         }
         h2 {
-            color: #2c3e50;
+            color: #8B0000;
+            border-bottom: 3px solid #B22222;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+        }
+        ul.notice-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.notice-list li {
             margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
         }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        ul.notice-list li::before {
+            content: '✓';
+            color: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
         }
         iframe {
             width: 100%;
             height: 315px;
             border: none;
             border-radius: 8px;
+            margin-top: 15px;
+        }
+        .person {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .person img {
+            width: 100%;
+            max-width: 180px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .person p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                padding: 8px;
+                margin-bottom: 5px;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>ভিডিও কন্টেন্ট নির্মাতা</header>
+<header>CONTENT CREATOR তারাজুল ইসলাম বিজয়</header>
 
-<section>
-    <h2>আমার সম্পর্কে</h2>
-    <p>আমি একজন কন্টেন্ট নির্মাতা। আমি তথ্যবহুল ও শিক্ষামূলক ভিডিও তৈরি করি বাংলা ভাষায়। আমার নাম তারাজুল ইসলাম বিজয়। আমার ইউটিউবের নাম সোহান ইসলাম।</p>
-</section>
+<nav>
+    <a href="#">আমার সম্পর্কে</a>
+    <a href="#">আমার ভিডিও</a>
+    <a href="#">গ্যালারি</a>
+    <a href="#">যোগাযোগ</a>
+    <a href="#">মতামত</a>
+</nav>
 
-<section>
-    <h2>আমার ভিডিও</h2>
-    <iframe src="https://www.youtube.com/embed/jIzCDFXvHig" title="YouTube video player" allowfullscreen></iframe>
-</section>
+<div class="container">
+    <main>
+        <section>
+            <h2>নোটিশ বোর্ড</h2>
+            <ul class="notice-list">
+                <li>বগুড়া গাবতলি থানায় আমার বাড়ি</li>
+                <li>কিভাবে ভিডিও বানাবেন</li>
+                <li>ভিডিও কিভাবে এডিট করবেন</li>
+                <li>আমার পরিচিতি</li>
+            </ul>
+        </section>
 
-<section>
-    <h2>যোগাযোগ</h2>
-    <p>ইমেইল: <a href="mailto:your-bijoy32222@gmail.com">bijoy32222@gmail.com</a></p>
-    <p>ফোন: 01871959444</p>
-</section>
+        <section>
+            <h2>আমার ভিডিও</h2>
+            <iframe src="https://www.youtube.com/embed/jIzCDFXvHig" title="YouTube video player" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>যোগাযোগ</h2>
+            <p>ইমেইল: <a href="mailto:bijoy32222@gmail.com">bijoy32222@gmail.com</a></p>
+            <p>ফোন: 01871959444</p>
+        </section>
+    </main>
+
+    <aside>
+        <div class="person">
+            <img src="myphoto2.jpg" alt="myphoto2" />
+            <p>মো: তারাজুল ইসলাম বিজয়<br>ভিডিও নির্মাতা</p>
+        </div>
+        <div class="person">
+            <img src="myshohan.jpg" alt="myshohan" />
+            <p>DH সোহান<br>ক্যামেরা ম্যান</p>
+        </div>
+    </aside>
+</div>
 
 </body>
 </html>
