@@ -15,16 +15,17 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #ff00ff; /* গোলাপি রঙ */
         }
 
         header {
-            background-color: #8B0000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: bold;
+            position: relative;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         nav {
@@ -141,10 +142,6 @@
                 flex-direction: column;
             }
 
-            nav {
-                flex-wrap: wrap;
-            }
-
             nav a {
                 padding: 8px;
                 margin-bottom: 5px;
@@ -154,46 +151,12 @@
 </head>
 <body>
 
-<header>CONTENT CREATOR তারাজুল ইসলাম বিজয়</header>
-<<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8" />
-  <title>Header Image Slider Test</title>
-  <style>
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-
+<!-- Header with Image Slider -->
 <header>
-  <img id="slider" src="images/banner1.jpg" alt="banner1" />
+    <img id="slider" src="images/banner1.jpg" alt="Banner Image" />
 </header>
 
-<script>
-  const images = [
-    "images/banner1.jpg",
-    "images/banner2.jpg",
-    "images/banner3.jpg",
-    "images/banner4.jpg"
-  ];
-  let index = 0;
-  const imgElement = document.getElementById("slider");
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    imgElement.src = images[index];
-  }, 3000);
-</script>
-
-</body>
-</html>
-
-
+<!-- Navigation Menu -->
 <nav>
     <a href="#about">আমার সম্পর্কে</a>
     <a href="#videos">আমার ভিডিও</a>
@@ -202,6 +165,7 @@
     <a href="#feedback">মতামত</a>
 </nav>
 
+<!-- Main Content and Sidebar -->
 <div class="container">
     <main>
         <section id="about">
@@ -248,12 +212,27 @@
     </aside>
 </div>
 
+<!-- Footer -->
 <footer>
     &copy; 2025 মো: তারাজুল ইসলাম বিজয় | সর্বস্বত্ব সংরক্ষিত
 </footer>
 
+<!-- Image Slider Script -->
+<script>
+    const images = [
+        "images/banner1.jpg",
+        "images/banner2.jpg",
+        "images/banner3.jpg",
+        "images/banner4.jpg"
+    ];
+    let index = 0;
+    const imgElement = document.getElementById("slider");
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        imgElement.src = images[index];
+    }, 3000);
+</script>
+
 </body>
-</html>cd tarajul-website
-git add .
-git commit -m "Updated website with new layout and menu"
-git push origin main
+</html>
