@@ -25,6 +25,16 @@
             text-align: center;
             font-size: 1.8rem;
             font-weight: bold;
+            position: relative;
+        }
+
+        /* Slider Image Style */
+        #slider {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            margin-top: 10px;
         }
 
         nav {
@@ -154,47 +164,18 @@
 </head>
 <body>
 
-<header>CONTENT CREATOR তারাজুল ইসলাম বিজয়</header>
-<<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8" />
-  <title>Header Image Slider Test</title>
-  <style>
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-
 <header>
-  <img id="slider" src="images/banner1.jpg" alt="banner1" />
+    CONTENT CREATOR তারাজুল ইসলাম বিজয়
+    <img id="slider" src="images/banner1.jpg" alt="banner1" />
 </header>
 
-<script>
-  const images = [
-    "images/banner1.jpg",
-    "images/banner2.jpg",
-    "images/banner3.jpg",
-    "images/banner4.jpg"
-  ];
-  let index = 0;
-  const imgElement = document.getElementById("slider");
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    imgElement.src = images[index];
-  }, 3000);
-</script>
-
-</body>
-</html>
-
-
 <nav>
+    <a href="#about">আমার সম্পর্কে</a>
+    <a href="#videos">আমার ভিডিও</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#contact">যোগাযোগ</a>
+    <a href="#feedback">মতামত</a>
+</nav>
 
 <div class="container">
     <main>
@@ -222,7 +203,7 @@
             <h2>যোগাযোগ</h2>
             <p>ইমেইল: <a href="mailto:bijoy32222@gmail.com">bijoy32222@gmail.com</a></p>
             <p>ফোন: 01871959444</p>
-            <p>ফেসবুক: <a href="https://facebook.com/tarajulvlog1" target="_blank">আমার Facebook আইডি</a></p>
+            <p>ফেসবুক: <a href="https://facebook.com/tarajulvlog1" target="_blank" rel="noopener noreferrer">আমার Facebook আইডি</a></p>
         </section>
 
         <section id="feedback">
@@ -246,6 +227,22 @@
 <footer>
     &copy; 2025 মো: তারাজুল ইসলাম বিজয় | সর্বস্বত্ব সংরক্ষিত
 </footer>
+
+<script>
+  const images = [
+    "images/banner1.jpg",
+    "images/banner2.jpg",
+    "images/banner3.jpg",
+    "images/banner4.jpg"
+  ];
+  let index = 0;
+  const imgElement = document.getElementById("slider");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+  }, 3000);
+</script>
 
 </body>
 </html>
