@@ -3,11 +3,11 @@ body {
   margin: 0;
   padding: 0;
   background: #f4f4f4;
-  color: #222;
+  color: #ff00ff;  
 }
 
 header {
-  background: #2c3e50;
+  background: #ff00ff; 
   color: white;
   text-align: center;
   padding: 2em 1em;
@@ -23,7 +23,7 @@ section {
 }
 
 h2 {
-  color: #2c3e50;
+  color: #ff00ff;  
 }
 
 .video-container {
@@ -31,8 +31,7 @@ h2 {
 }
 
 footer {
-  background: #333;
-  color: white;
+  background: #ff00ff;  
   text-align: center;
   padding: 1em;
   margin-top: 2em;
