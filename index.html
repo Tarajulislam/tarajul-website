@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>আমার ওয়েবসাইট</title>
+    <title>Md. Tarajul Islam Bijoy | কনটেন্ট ক্রিয়েটর</title>
+    <meta name="description" content="আমি মোঃ তারাজুল ইসলাম বিজয়, একজন ভিডিও নির্মাতা এবং কনটেন্ট ক্রিয়েটর। এখানে আপনি আমার কাজ, ভিডিও এবং যোগাযোগের তথ্য পাবেন।">
+
+    <!-- Google Font (বাংলা) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'SolaimanLipi', Arial, sans-serif;
+            font-family: 'Noto Sans Bengali', Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             color: #333;
         }
+
         header {
             background-color: #8B0000;
             color: white;
@@ -20,14 +26,17 @@
             font-size: 1.8rem;
             font-weight: bold;
         }
+
         nav {
             background-color: #B22222;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
             padding: 12px 0;
             font-weight: bold;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -36,9 +45,11 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             background-color: #7a1414;
         }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -46,6 +57,7 @@
             gap: 20px;
             padding: 0 15px;
         }
+
         main {
             flex: 3;
             background-color: white;
@@ -53,6 +65,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         aside {
             flex: 1;
             background-color: white;
@@ -61,21 +74,25 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             height: fit-content;
         }
+
         h2 {
             color: #8B0000;
             border-bottom: 3px solid #B22222;
             padding-bottom: 6px;
             margin-bottom: 15px;
         }
+
         ul.notice-list {
             list-style-type: none;
             padding-left: 0;
         }
+
         ul.notice-list li {
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
         }
+
         ul.notice-list li::before {
             content: '✓';
             color: green;
@@ -84,6 +101,7 @@
             top: 0;
             font-weight: bold;
         }
+
         iframe {
             width: 100%;
             height: 315px;
@@ -91,28 +109,42 @@
             border-radius: 8px;
             margin-top: 15px;
         }
+
         .person {
             text-align: center;
             margin-bottom: 25px;
         }
+
         .person img {
             width: 100%;
             max-width: 180px;
             border-radius: 10px;
             margin-bottom: 10px;
         }
+
         .person p {
             margin: 0;
             font-weight: bold;
             font-size: 14px;
         }
+
+        footer {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
         @media screen and (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
+
             nav {
                 flex-wrap: wrap;
             }
+
             nav a {
                 padding: 8px;
                 margin-bottom: 5px;
@@ -125,17 +157,17 @@
 <header>CONTENT CREATOR তারাজুল ইসলাম বিজয়</header>
 
 <nav>
-    <a href="#">আমার সম্পর্কে</a>
-    <a href="#">আমার ভিডিও</a>
-    <a href="#">গ্যালারি</a>
-    <a href="#">যোগাযোগ</a>
-    <a href="#">মতামত</a>
+    <a href="#about">আমার সম্পর্কে</a>
+    <a href="#videos">আমার ভিডিও</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#contact">যোগাযোগ</a>
+    <a href="#feedback">মতামত</a>
 </nav>
 
 <div class="container">
     <main>
-        <section>
-            <h2>নোটিশ বোর্ড</h2>
+        <section id="about">
+            <h2>আমার সম্পর্কে</h2>
             <ul class="notice-list">
                 <li>বগুড়া গাবতলি থানায় আমার বাড়ি</li>
                 <li>কিভাবে ভিডিও বানাবেন</li>
@@ -144,29 +176,46 @@
             </ul>
         </section>
 
-        <section>
+        <section id="videos">
             <h2>আমার ভিডিও</h2>
             <iframe src="https://www.youtube.com/embed/jIzCDFXvHig" title="YouTube video player" allowfullscreen></iframe>
         </section>
 
-        <section>
+        <section id="gallery">
+            <h2>গ্যালারি</h2>
+            <p>এখানে ভবিষ্যতে কাজের নমুনা যুক্ত করা হবে।</p>
+        </section>
+
+        <section id="contact">
             <h2>যোগাযোগ</h2>
             <p>ইমেইল: <a href="mailto:bijoy32222@gmail.com">bijoy32222@gmail.com</a></p>
             <p>ফোন: 01871959444</p>
+        </section>
+
+        <section id="feedback">
+            <h2>মতামত</h2>
+            <p>আপনার মতামত জানান আমাদের ফেসবুক পেজে বা ইমেইলে।</p>
         </section>
     </main>
 
     <aside>
         <div class="person">
-            <img src="myphoto2.jpg" alt="myphoto2" />
+            <img src="images/myphoto2.jpg" alt="myphoto2" />
             <p>মো: তারাজুল ইসলাম বিজয়<br>ভিডিও নির্মাতা</p>
         </div>
         <div class="person">
-            <img src="myshohan.jpg" alt="myshohan" />
-            <p>DH সোহান<br>ক্যামেরা ম্যান</p>
+            <img src="images/myshohan.jpg" alt="myshohan" />
+            <p>DH সোহান<br>ক্যামেরা ম্যান (1)</p>
         </div>
     </aside>
 </div>
 
+<footer>
+    &copy; 2025 মো: তারাজুল ইসলাম বিজয় | সর্বস্বত্ব সংরক্ষিত
+</footer>
+
 </body>
-</html>
+</html>cd tarajul-website
+git add .
+git commit -m "Updated website with new layout and menu"
+git push origin main
